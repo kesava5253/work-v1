@@ -1,0 +1,19 @@
+<?php
+$hostname='localhost';	
+$username = "root";
+$password = "";
+$dbname = "NotaryHub";
+$conn = new mysqli($hostname,$username,$password,$dbname);
+	
+	$get_id = $_SESSION['uid'];
+	
+	echo $get_id;
+	echo "size = $_POST[size]";
+	echo "amount= $POST[amount]";
+  
+		$sql = "UPDATE Price  SET file_size='$_POST[size]' ,amount_Rs='$_POST[amount]'
+		WHERE Id='$get_id'";
+	$conn->query($sql);
+
+header("location:pricelis.php");
+?>

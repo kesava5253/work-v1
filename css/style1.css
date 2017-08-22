@@ -1,0 +1,19 @@
+.cap_status{
+	margin-top: 10px;
+	width: 185px;
+	padding: 10px;
+	font: 14px arial;
+	color: #fff;
+	background-color: #10853f;
+	display: none;
+}
+.cap_status_error{
+   background-color: #bd0808;                
+}
+.wrapper{
+	background-color: #fff;
+	box-shadow: 1px 1px 1px 1px black;
+	width: 800px;
+	padding: 20px;
+	margin: 10% auto;
+}
