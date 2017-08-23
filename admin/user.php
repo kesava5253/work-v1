@@ -4,6 +4,7 @@ include("database.php");
 if(isset($_GET['userid'])){
 $id=$_GET['userid'];
 $_SESSION['userid']=$id;
+$_SESSION['pageno']=$_GET['page'];	
 }
 else
 {

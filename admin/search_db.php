@@ -162,9 +162,9 @@ $rows = mysqli_fetch_array($count);
   $output .= '
    <tr>
     <td>'.$row["Id"].'</td>
-    <td><a href=user.php?userid='.$row["Id"].'>'.$row["username"].'</a></td>
+    <td><a href=user.php?userid='.$row["Id"].'&page='.$page.'>'.$row["username"].'</a></td>
     <td>'.$row["email"].'</td>
-    <td><a href=password_change.php?userid='.$row["Id"].'>Change Password</a></td>
+    <td><a href=password_change.php?userid='.$row["Id"].'&page='.$page.'>Change Password</a></td>
     <td><a href=user_docs.php?userid='.$row["Id"].'>'.$rows["c"].'</td>
 	 <td>'.$row["last_login"].'</td>';
 if ($row["status"] == 0 ){

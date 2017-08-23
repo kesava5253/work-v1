@@ -1,6 +1,7 @@
 <?php
 session_start();
 $id=$_SESSION['userid'];
+$page=$_SESSION['pageno'];
 $username = "root";
 $password = "";
 $dbname = "NotaryHub";
@@ -9,6 +10,6 @@ $sql = "Update userdata  SET username='$_POST[fname]',lname='$_POST[lname]',emai
 
 $con->query($sql);
 $_SESSION['userid']=$id;
-header("location:user.php");
+header("location:table.php?page=$page");
 
 ?> 

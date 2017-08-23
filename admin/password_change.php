@@ -5,6 +5,7 @@ include("database.php");
 if(isset($_GET['userid'])){
 $id=$_GET['userid'];
 $_SESSION['userid']=$id;
+$_SESSION['pageno']=$_GET['page'];
 }
 else
 {
@@ -228,7 +229,7 @@ $mail=$row['email'];
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label>New Password</label>
-                                                <input type="password" class="form-control" name="password"   placeholder="New Password"  required >
+                                                <input type="password" class="form-control" name="password"   placeholder="New Password"   >
                                             </div>
 										</div>
 								
@@ -236,7 +237,7 @@ $mail=$row['email'];
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label>Confirm Password</label>
-                                                <input type="password" class="form-control" name="confirmpassword"   placeholder="Confirm Password" required >
+                                                <input type="password" class="form-control" name="confirmpassword"   placeholder="Confirm Password"  >
                                             </div>
 										</div>
 									</div>

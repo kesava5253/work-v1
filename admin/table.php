@@ -180,7 +180,8 @@ Set Limit :
   <option value="15">15</option>
   <option value="25">25</option>
 </select>
-</form>	
+</form>
+	  <div style="height :10px "></div>
 <div style="float:right;">								 
    <div class="form-group">
     <div class="input-group">

@@ -173,6 +173,7 @@
                             <div class="content table-responsive table-full-width">
                                 <table class="table table-hover table-striped">
                                     <thead>
+										<th>Id</th>
                                     	<th>File Name</th>
                                     	<th>Type of file</th>
                                     	<th>size</th>
@@ -183,19 +184,20 @@
                                     <tbody>
 										
 <?php
-	$sql="SELECT * FROM UPLOADS WHERE Id=$userid";
+	$id=0;
+	$sql="SELECT * FROM UPLOADS WHERE Id=$userid ORDER BY date DESC ";
 	$result_set=$conn->query($sql);
 	while($row=$result_set->fetch_assoc())
 			
 {
-
  $file=$row['file'];
  $type=$row['type'];
  $size=$row['size'];
  $path=$row['path'];
-
+ $id =$id+1;
 ?>
 <tr>
+	<td><?php echo $id ?></td>
     <td><?php echo $file ?></td>
     <td><?php echo $type ?></td>
     <td><?php echo $size ?></td>			
