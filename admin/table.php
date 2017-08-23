@@ -16,16 +16,12 @@
 if(isset($_GET['sorting'])){
      $_SESSION['sorting']=$_GET['sorting'];
 }
-else{
-	$_SESSION['sorting']='ASC';
-}
+
 		 
-if(isset($_GET['field'])){		 
+if(isset($_GET['field'])){
      $_SESSION['field']=$_GET['field'];
 }
-else{
-	$_SESSION['field']='id';
-}
+
 		
 ?>
 

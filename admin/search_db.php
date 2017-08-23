@@ -30,6 +30,7 @@ if(isset($_SESSION['sorting']))
     $sort='ASC';
   }
 }
+if(isset($_SESSION['field'])){
 if($_SESSION['field']=='id')
 {
    $field = "Id"; 
@@ -37,6 +38,10 @@ if($_SESSION['field']=='id')
 elseif($_SESSION['field']=='username')
 {
    $field = "username";
+}
+/*elseif($_SESSION['field']=='docs'){
+  $field="c";
+}*/
 }
 //*****************************************************
 $connect = mysqli_connect("localhost", "root", "", "NotaryHub");
@@ -126,7 +131,7 @@ if(mysqli_num_rows($result) > 0)
      <th>email</th>
 	 <th>password</th>
    <!--  <th>city</th> -->
-     <th>Documents</th>
+     <th><a href="table.php?sorting='.$sort.'&field=docs">Documents</a></th>
 	 <th>LastLogin</th>
 	 <th>Status</th>
 	 <th>Apply Discount</th>
@@ -194,6 +199,9 @@ $a=ceil($paging/$limit);
 if($page<$a){
   $output .= '<button><a href=table.php?page='.($page+1).'>Next</a></button>';	
 }
+
+unset($_SESSION['sorting']);
+unset($_SESSION['field']);
 
  echo $output;
 
