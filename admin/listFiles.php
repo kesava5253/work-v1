@@ -172,7 +172,7 @@
                                     <tbody>
 										
 <?php
-	$sql="SELECT * FROM UPLOADS";
+	$sql="SELECT * FROM UPLOADS ORDER BY date DESC";
 	$result_set=$conn->query($sql);
 	while($row=$result_set->fetch_assoc())
 			
