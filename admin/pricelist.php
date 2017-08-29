@@ -246,62 +246,7 @@
                     
 
 
-                    <div class="col-md-12">
-                        <div class="card card-plain">
-                            <div class="header">
-                                <h4 class="title">Discounts</h4>
-                                <p class="category"></p>
-                            </div>
-                            <div class="content table-responsive table-full-width">
-                             <form method="POST" name="proform" action="update_discount.php">
-                                <table class="table table-hover">
-                                    <thead>
-                                        <th>UserID</th>
-                                    	<th>Discount</th>
-                                       <th></th>
-                                    </thead>
-                                    <tbody>
-         <?php
-      $result =$dbh->prepare("Select * from discount_data ");
-      $result->execute();
-      while($row=$result->fetch(PDO::FETCH_ASSOC)){
-      	
-            
-      
-?>                                        <tr>
-                                        	<td><?php echo $row["Id"] ?></td>
-                 <?php                       	
-                                   if($row["Id"]==$get_id){
-                          ?>
-                                        	                
-                                    <td> <input type="text"   name="discount"  value="<?php echo $row['discount'] ?>"></td>
-                            
-                           		<td><button><input type="submit" name="update" value="Update" ></button></td>
-       <?php
-    }
-    else {
-           ?>
-            	<td><?php echo $row["discount"] ?></td>
-                            
-                           		<td><button><a href="pricelist.php?id=<?php echo $row['Id']?>">Change</a> </button></td>
-                           <?php 
-                        }
-                     }
-                     ?>
-                                     </tr>  
-                                    </tbody>
-                                 
-                                </table>
-                                </form>
-
-                            </div>
-                        </div>
-                    </div>
-
-
-                </div>
-            </div>
-        </div>
+                    
 
         <footer class="footer">
             <div class="container-fluid">
