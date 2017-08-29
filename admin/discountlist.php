@@ -172,10 +172,10 @@
                  <?php                       	
                                    if($row["Id"]==$get_id){
                           ?>
-                                     <td> <input type="text"   name="document"  value="<?php echo $row['No_of_documents'] ?>"></td>   	                
-                                    <td> <input type="text"   name="discount"  value="<?php echo $row['discount'] ?>"></td>
+                                     <td> <input type="text"   name="document" size="3"  value="<?php echo $row['No_of_documents'] ?>"></td>   	                
+                                    <td> <input type="text"   name="discount" size="3" value="<?php echo $row['discount'] ?>"></td>
                             
-                           		<td><button><input type="submit" name="update" value="Update" ></button></td>
+                           		<td><input type="submit" name="update" style="color:green" value="Update" ></td>
        <?php
     }
     else {
