@@ -248,7 +248,7 @@ $state=$row['state'];
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label>Password</label>
-                                                <input type="password" class="form-control" name="password"   placeholder="password" value="<?php echo $pass ?>" required >
+                                                <input type="password" class="form-control" name="password"   disabled placeholder="password" value="<?php echo $pass ?>" required >
                                             </div>
                                         </div>
                                         

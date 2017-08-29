@@ -3,7 +3,7 @@
 session_start();
 function pagination($limit){	
 $page=$_SESSION['paging'];	
-	if($page=="" || $page=="1")
+	if($page=="" || $page=="1"||$page=="0")
 	{
 		$page1=0;
 	}
