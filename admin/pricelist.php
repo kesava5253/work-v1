@@ -213,10 +213,10 @@
       		
       	?>
                                                   
-                                    <td> <input type="text"   name="size"  value="<?php echo $row['file_size'] ?>"></td>
-                                     <td> <input type="text"  name="amount"  value="<?php echo $row['amount_Rs'] ?>"></td>
+                                    <td> <input type="text"   name="size"  size="3" value="<?php echo $row['file_size'] ?>"></td>
+                                     <td> <input type="text"  name="amount" size="3" value="<?php echo $row['amount_Rs'] ?>"></td>
               
-                           		<td><input type="submit" name="update" value="Update"></td>
+                           		<td><input type="submit" name="update" style="color:green" value="Update"></td>
        <?php
            }
      else{
